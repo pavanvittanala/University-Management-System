@@ -1,0 +1,159 @@
+<html>
+<head>
+<style>
+body { 
+  display: block;
+  margin: 10%;
+}
+    td:hover{
+        transform: scale(1.2);
+    }
+</style>
+    <script>
+        function validateStdReg()
+        {
+            var fname = window.document.stdreg.name1.value;
+            var lname = window.document.stdreg.name2.value;
+            var uname = window.document.stdreg.username.value;
+            var pass = window.document.stdreg.pswd.value;
+            var idnum = window.document.stdreg.jntukno.value;
+            var phnum = window.document.stdreg.mobile.value;
+            var mailid = window.document.stdreg.mailid.value;
+            check = new RegExp("[^a-zA-Z]","g");
+            check1 = new RegExp("[^0-9]","g");
+            check2 = new RegExp("[^0-9a-zA-z!@#\$%|/&]","g");
+            check3 = new RegExp("[^a-zA-Z0-9]","g");
+            
+            if(fname.length<1)
+                {
+                    alert("First Name Should Required...");
+                    return false;
+                }
+            if(fname.match(check))
+                {
+                    alert("First Name Should Contain only Alphabets...");
+                    return false;
+                }
+            if(lname.length<1)
+                {
+                    alert("Last Name Should Required...");
+                    return false;
+                }
+            if(lname.match(check))
+                {
+                    alert("Last Name Should Contain only Alphabets...");
+                    return false;
+                }
+            if(uname.length<1)
+                {
+                    alert("Username Should required...")
+                    return false;
+                }
+            if(uname.length<7 || uname.length>15)
+                {
+                    alert("Length of Username Should Between 7 & 15...")
+                    return false;
+                }
+            if(pass.length<1)
+                {
+                    alert("Password Should required...")
+                    return false;
+                }
+            if(pass.length<8 || pass.length>12)
+                {
+                    alert("Password Should between of length 8 & 12...")
+                    return false;
+                }
+            if(pass.match(check2))
+                {
+                    alert("Password is Invalid...")
+                    return false;
+                }
+            if(idnum.length<1)
+                {
+                    alert("Student ID Should Required...");
+                    return false;
+                }
+            if(idnum.length<10 || idnum.length>10)
+                {
+                    alert("Student ID is Invalid...");
+                    return false;
+                }
+            if(idnum.match(check3))
+                {
+                    alert("Student ID is Invalid...")
+                    return false;
+                }
+            if(phnum.length<1)
+                {
+                    alert("Mobile Number Should required...")
+                    return false;
+                }
+            if(phnum.length<10 || phnum.length>10)
+                {
+                    alert("Mobile Number is Invalid...")
+                    return false;
+                }
+            if(phnum.match(check1))
+                {
+                    alert("Mobile Number is Invalid...")
+                    return false;
+                }
+            if(mailid.length<1)
+                {
+                    alert("Mail-Id Should Required...");
+                    return false;
+                }
+            
+            
+            alert("Successfully Logging In....")
+            return true;
+            
+        }
+        
+    </script>
+
+</head>
+<body background="stdback1.jpg">
+    
+
+	<h2 align="center"> <font color="white"> <u>Student Registration </u></font></h2>
+	<center>
+	<form name="stdreg" action="phpfirst.php" sonsubmit="return validateStdReg()"  >
+	<table cellspacing="5" cellpadding="5">
+	<tr>
+	<td> <font color="white"> <b> Name: </b> </font> </td> <br> 
+	<td> <input type="text" name="name1" placeholder="First Name"> </td>
+	<td> <input type="text" name="name2" placeholder="Last Name"> </td>
+	</tr>
+	<tr>
+	<td> <font color="white"> <b>  UserName : </b> </font> </td> <br>
+	<td> <input type="text" name="username" placeholder="EnTEr uSeR nAmE" required> </td>
+	</tr>
+	<tr>
+	<td> <font color="white"> <b>  Password : </b> </font> </td> <br>
+	<td> <input type="password" name="pswd" placeholder="EnTEr pAssWoRd"> </td>
+	</tr>
+	<tr>
+	<td> <font color="white"> <b>  Jntuk Number : </b> </font> </td> <br>
+	<td> <input type="text" name="jntukno" placeholder="EnTEr jNtUk nO."> </td>
+	</tr>
+	<tr>
+	<td> <font color="white"> <b>  Mobile : </b> </font> </td> <br>
+	<td> <input type="text" name="mobile" placeholder="yOuR mOBilE nO."> </td>
+	</tr>
+	<tr>
+	<td> <font color="white"> <b>  E-mail Id : </b> </font> </td> <br>
+	<td> <input type="email" name="mailid" placeholder="yOuR mAil-iD"> </td>
+	</tr>
+	<tr> <td> </td>
+	<td align="center"> <input type="submit" value="Sign Up" style="height:35px; width:150px"> </td>
+	</tr>
+	<tr>
+	<td> <p> <font color="white"> <b> Already having you an account?? </b> </font> </p> </td>
+	<td> <a href="student-login.html" > <font color="LawnGreen"> <b>Sign In </b> </font></a> </td>
+	</tr>
+	</table>
+	</form> </center>
+</body>
+</html>

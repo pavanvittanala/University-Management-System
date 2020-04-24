@@ -1,0 +1,121 @@
+<html>
+<head>
+<style>
+body { 
+  display: block;
+  margin: 8%;
+}
+</style>
+<script>
+function validateFaculty()
+    {
+        var fname = window.document.facultyReg.uname1.value;
+        var lname = window.document.facultyReg.uname2.value;        
+        var uname = window.document.facultyReg.usrnm.value;
+        var pass = window.document.facultyReg.password.value;
+        var phno = window.document.facultyReg.mblnum.value;
+        var mail = window.document.facultyReg.mail1.value;
+        
+        chknm = new RegExp("[^a-zA-Z]","g");
+        chkunm = new RegExp("[^a-zA-Z0-9]","g");
+        chkph = new RegExp("[^0-9]","g");
+        chkpwd = new RegExp("[^0-9a-zA-z!@#\$%|/&]","g");
+        
+        if(fname.length() <1 || lname.length() <1)
+            {
+                alert("Please enter full name...")
+                return false;
+            }
+        if(fname.match(chknm) || lname.match(chknm))
+            {
+                alert("Enter valid name...");
+                return false;;
+            }
+        if(uname.length() <1)
+            {
+                alert("Please provide username.....");
+                return false;
+            }
+        if(uname.match(chkunm))
+            {
+                alert("Enter valid username...");
+                return false;
+            }
+        if(pass.length(0 <1))
+            {
+                alert("Please provide Password....");
+                return false;
+            }
+        if(pass.match(chkpwd))
+            {
+                alert("Enter valid password...");
+                return false;
+            }
+        if(phno.length() <1)
+            {
+                alert("Please provide Mobile Number...");
+                return false;
+            }
+        if(phno.length() != 10)
+            {
+                alert("Not a valid phone number");
+                return false;
+            }
+        if(phno.match(chkph))
+            {
+                alert("Enter valid Mobile Number...");
+                return false;
+            }
+        alert("Registration successful...");
+        return true;            
+        
+        
+        
+    }
+</script>
+    
+</head>
+<body background="fcltyback1.jpg">
+	<h2 align="center"> <font color="white"> <u>Faculty Regestration </u></font></h2>
+	<center>
+	<form name="facultyReg" onsubmit="return validateFaculty()">
+	<table cellspacing="15" cellpadding="5" >
+	<tr>
+	<td> <font color="white"> <b> Name: </b> </font> </td> 
+	<td> <input type="text" name="uname1" placeholder="fIrSt nAmE"> </td>
+	<td> <input type="text" name="uname2" placeholder="lAsT nAmE"> </td>
+    </tr>
+	<tr>
+	<td> <font color="white"> <b>  UserName : </b> </font> </td> <br>
+	<td> <input type="text" name="usrnm" placeholder="EnTEr uSeR nAmE"> </td>
+	</tr>
+	<tr>
+	<td> <font color="white"> <b>  Password : </b> </font> </td> <br>
+	<td> <input type="password" name="password" placeholder="EnTEr pAssWoRd"> </td>
+	</tr>
+	<tr>
+	<td> <font color="white"> <b>  Id Number : </b> </font> </td> <br>
+	<td> <input type="text" name="idno" placeholder="EnTEr Id nO."> </td>
+    </tr>
+    <tr>
+	<td> <font color="white"> <b>  Mobile : </b> </font> </td> <br>
+	<td> <input type="text" name="mblnum" placeholder="EnTEr mOBile nO."> </td>
+	</tr>
+	<tr>
+	<td> <font color="white"> <b>  E-mail Id : </b> </font> </td> <br>
+	<td> <input type="email" name="mail1" placeholder="yOuR mAil-iD"> </td>
+	</tr>
+	<tr>
+    <td></td>
+    <td> 
+    <input type="submit" value="Sign Up" style="height:35px; width:150px"> <br>    
+    </td>
+    </tr> 
+	<tr>
+	<td> <p> <font color="white"> <b> Already have you an account?? </b> </font> </p> </td>
+	<td> <a href="faculty-login.html" > <font color="DarkGreen"> <b>  Sign In </b> </font></a> </td>
+	</tr>
+	</table>
+	</form> </center>
+</body>
+</html>

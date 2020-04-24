@@ -1,0 +1,96 @@
+<html>
+<head>
+<style>
+body { 
+  display: block;
+  margin: 15%;
+}
+    #signin:hover {
+        background-color: white;
+        transform: scale(1.2);
+        color: grey;
+        text-shadow: 0.8px 0px black
+    }
+    #tr1:hover{
+        color: wheat;
+        transform: scale(1.2)
+</style>
+<script>
+function validParent()
+    {
+        var name = window.document.loginparent.parentname.value;
+        var stdno = window.document.loginparent.stdnum.value;
+        var pass = window.document.loginparent.pwd.value;
+        check = RegExp("[^a-zA-Z]","g");
+        check1 = RegExp("[^a-zA-z0-9]","g");
+        check2 = RegExp("[^A-z0-9]","g");
+        
+        if(name.length<1 )
+            {
+                alert("Username Field Should be not empty...");
+                return false;
+            }
+        if(name.length<6 || name.length>12)
+           {
+           alert("Invalid Username...");
+               return false;
+           }
+        if(name.match(check))
+           {
+           alert("Username Field Should Contain only Alphabets...")
+                return false;
+           }
+        if(stdno.length<10 || stdno.length>10)
+           {
+           alert("Registration Number Contains Only 10 Characters...");
+               return false;
+           }
+        if(stdno.match(check2))
+           {
+           alert("Registration Number Is Invalid....");
+               return false;
+           }
+        if(pass.length<8)
+           {
+           alert("Password Should Contain Atleast 8 Characters....");
+               return false;
+           }
+        if(pass.match(check1))
+           {
+           alert("Invalid Password....");
+               return false;
+           }
+        alert("Successfully Logging In..");
+        return true;
+    }
+
+</script>
+</head>
+<body background="prntback.png" > 
+	<h2 align="center"> <font color="white"> <u>Parent Login</u> </font></h2>
+	<center>
+	<form name="loginparent" onsubmit="return validParent()">
+	<table cellspacing="15" cellpadding="5">
+	<tr id="tr1">
+	<td> <font color="white"> <b> Username: </b> </font> </td>
+	<td> <input type="text" name="parentname" placeholder="EnTEr NaMe" > </td>
+	</tr>
+    <tr id="tr1">
+	<td> <font color="white"> <b> Student Number: </b> </font> </td> <br> 
+	<td> <input type="text" name="stdnum" placeholder="yOuR cHilD rEg'S nO." > </td>
+	</tr>
+	<tr id="tr1">
+	<td> <font color="white"> <b>  Password : </b> </font> </td> <br>
+	<td> <input type="password" name="pwd" placeholder="EnTEr pAssWoRd"> </td>
+	</tr>
+	<tr id="tr1"> <td> </td>
+	<td align="center"> <input type="submit" id="signin" value="Sign_in" style="height:35px; width:150px"> </td>
+	</tr>
+	<tr id="tr1">
+	<td id="tr1"> <p> <font color="white"> <b> Don't you have an account?? </b> </font> </p> </td>
+	<td id="tr1"> <a href="parent-reg.html" > <font color="LawnGreen"> <b>Sign Up </b> </font></a> </td>
+	</tr>
+	</table>
+	</form> </center>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<html>
+<head>
+<style>
+    body{
+        background-image:url(student-prsnl.jpeg) ;
+        background-size:cover;
+    }
+	#inp {color : white;
+        height:25px;
+    width:250px; }
+    td{
+        color: white;
+        height: 50px;
+        width: 100px;
+    }
+    #sub:hover
+    {
+        transform: scale(1.2);
+        border-radius: 25px;
+    }
+</style>
+</head>
+<body >
+<p align="left" ><font color="White" size="6"> <i>  Student Personal Info </i></font> </p>
+<form>
+<table align="center" cellspacing="10" cellpadding="10">
+<tr>
+<td> Name </td>
+<td> : </td>
+<td id="inp"> <input type="text" name="stdname" placeholder="Student's Full Name" > </td>
+</tr>
+<tr>
+<td> Father's Name </td>
+<td> : </td>
+<td id="inp"> <input type="text" name="fthrname" placeholder="Father's Full Name" > </td>
+</tr>
+<tr>
+<td> Mother's Name </td>
+<td> : </td>
+<td id="inp" > <input type="text" name="mthrname" placeholder="Mother's Full Name" > </td>
+</tr>
+<tr>
+<td> Date Of birth </td>
+<td> : </td>
+<td id="inp"> <input type="date" name="stddob" > </td>
+</tr>
+<tr>
+<td> Gender </td>
+<td> : </td>
+<td id="inp"> <input type="text" name="stdgndr" placeholder="Ex: Male" > </td>
+</tr>
+<tr>
+<td> Mobile </td>
+<td> : </td>
+<td id="inp"> <input type="text" name="stdmbl" placeholder="+91 93*******31" > </td>
+</tr>
+<tr>
+<td> Email- Id </td>
+<td> : </td>
+<td> <input type="text" name="stdmail" placeholder="Ex: student_mail@gmail.com" > </td>
+</tr>
+<tr>
+<td> Blood Group </td>
+<td> : </td>
+<td> <select name="stdblood" > 
+	<option id="" value=""> Select Blood Group </option>
+	<option value="A+" > A+ </option>
+	<option value="A-" > A- </option>
+	<option value="B+" > B+ </option>
+	<option value="B-" > B- </option>
+	<option value="O+" > O+ </option>
+	<option value="O-" > O- </option>
+	<option value="AB+" > AB+ </option>
+	<option value="AB-" > AB- </option>
+	</select> </td>
+</tr>
+<tr>
+<td> Identification Marks</td>
+<td> : </td>
+<td id="inp"> <input type="text" name="stdmole1" placeholder="1. A mole on..." > </td> 
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+<td id="inp"> <input type="text" name="stdmole2" placeholder="2. A mole on..." > </td>
+</tr>
+<tr>
+<td> Aadhar Number</td>
+<td> : </td>
+<td id="inp"> <input type="text" name="stduidai" placeholder="Enter 12-digit Aadhar no." > </td>
+</tr>
+<tr>
+<td> Photo</td>
+<td> : </td>
+<td id="inp"> <input type="file" name="stdpic" placeholder="Upload File" accept="image/*" > </td>
+</tr>
+<tr>
+<td> Address </td>
+<td> : </td>
+<td id="inp"> <textarea cols="33" rows="5" name="stdadrs" placeholder="Ex: Your_Address"></textarea> </td>
+</tr>
+<tr>
+<td align="center" id="sub"> <input type="submit" value="Submit" style="height:35px; width:150px"> </td>
+<td> </td>
+<td align="center" id="sub"> <input type="reset" value="Clear" style="height:35px; width:150px"> </td>
+</tr>
+</table>
+</form>
+</body>
+</html>

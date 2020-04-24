@@ -1,0 +1,85 @@
+<html>
+<head>
+<style>
+body { 
+  display: block;
+  margin: 15%;
+}
+    #rad1{
+        border-radius: 10px;
+        width: 200px;
+        font-family:monospace;
+    }
+    #signin:hover {
+        background-color: white;
+        transform: scale(1.2);
+        color: grey;
+        text-shadow: 0.8px 0px black
+    }
+    #tr1:hover{
+        transform: scale(1.2);
+    
+    </style>
+<script>
+function validateForm(loginform)
+{
+	var idname = window.document.loginform.username.value;
+	var idpassword = window.document.loginform.pswd.value;
+	check = new RegExp("[^a-zA-z]","g");
+	if(idname.length<1)
+	{
+	alert("Username Field Can't Be Empty..");
+	return false;
+	}
+	if(idname.match(check))
+	{
+	alert("Name Should Contain Alphabets Only..");
+	return false;
+	}
+	if(idname.length<6)
+	{
+	alert("Name Should Contain of Atleast 6 characters");
+	return false;
+	}
+	if(idpassword.length<1)
+	{
+	alert("Password Filed Can't Be Empty");
+	return false;
+	}
+	if(idpassword.length<8)
+	{
+	alert("Password Should Of Atleast 8 Characters");
+	return false;
+	}
+	return true;
+	
+}
+</script>
+    
+    
+    
+</head>
+<body background="stdback.jpg">
+	<h2 align="center"> <font color="white"> <u>Student Login </u> </font></h2>
+	<center>
+	<form name="loginform" onsubmit="return validateForm()" >
+	<table cellspacing="5" cellpadding="5" id="tab">
+	<tr id="tr1">
+	<td > <font color="white"> <b> Username: </b> </font> </td> <br> 
+	<td > <input type="text" name="username" id="rad1" placeholder="   EnTEr NaMe"> </td>
+	</tr>
+	<tr id="tr1">
+	<td > <font color="white"> <b>  Password : </b> </font> </td> <br>
+	<td > <input type="password" name="pswd" id="rad1" placeholder="   EnTEr pAssWoRd"> </td>
+	</tr>
+	<tr> <td> </td>
+	<td align="center"> <input type="submit" id="signin" value="Sign in" style="height:35px; width:150px"> </td>
+	</tr>
+	<tr id="tr1">
+	<td> <p> <font color="white"> <b> Don't you have an account?? </b> </font> </p> </td>
+	<td> <a href="student-reg.html" > <font color="LawnGreen"> <b>Sign Up </b> </font></a> </td>
+	</tr>
+	</table>
+	</form> </center>
+</body>
+</html>

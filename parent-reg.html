@@ -1,0 +1,70 @@
+<html>
+<head>
+<style>
+body { 
+  display: block;
+  margin: 5%;
+}
+</style>
+<script>
+    
+    function validateParent()
+    {
+        var fname = window.document.parentReg.fname.value;
+        var lname = window.document.parentReg.lname.value;
+        
+        if(fname.length() < 1)
+            {
+                alert("full Name is required....");
+                return false;
+            }
+        
+        alert("Registration Successful.....");
+        return true;
+        
+        
+    }
+    
+</script>
+</head>
+<body background="fcltyback.jpg">
+	<h2 align="center"> <font color="white"> <u>Parent Regestration </u> </font></h2>
+	<center>
+	<form name="parentReg" onsubmit="return validateParent()" >
+	<table cellspacing="5" cellpadding="5">
+	<tr>
+	<td> <font color="white"> <b> Name: </b> </font> </td> <br> 
+	<td> <input type="text" name="fname" placeholder="fIrSt nAmE" > </td>
+	<td> <input type="text" name="lname" placeholder="lAsT nAmE"> </td>
+	</tr>
+	<tr>
+	<td> <font color="white"> <b>  UserName : </b> </font> </td> <br>
+	<td> <input type="text" name="usrnme" placeholder="uSEr nAmE"> </td>
+	</tr>
+	<tr>
+	<td> <font color="white"> <b>  Password : </b> </font> </td> <br>
+	<td> <input type="password" pass="password" placeholder="EnTEr pAssWoRd"> </td>
+	</tr>
+	<tr>
+	<td> <font color="white"> <b>  Child Jntuk No. : </b> </font> </td> <br>
+	<td> <input type="text" name="chldno" placeholder="cHilD jNtUk nO." > </td>
+	</tr>
+	<tr>
+	<td> <font color="white"> <b>  Mobile : </b> </font> </td> <br>
+	<td> <input type="text" name="mobile" placeholder="moBile nO."> </td>
+	</tr>
+	<tr>
+	<td> <font color="white"> <b>  E-mail Id : </b> </font> </td> <br>
+	<td> <input type="text" name="mail1" placeholder="yOuR mAil-iD"> </td>
+	</tr>
+	<tr> <td> </td>
+	<td align="center"> <input type="submit" value="Sign Up" style="height:35px; width:150px"> </td>
+	</tr>
+	<tr>
+	<td> <p> <font color="white"> <b> Already have you an account?? </b> </font> </p> </td>
+	<td> <a href="parent-login.html" > <font color="LawnGreen"> <b>Sign In </b> </font></a> </td>
+	</tr>
+	</table>
+	</form> </center>
+</body>
+</html>
